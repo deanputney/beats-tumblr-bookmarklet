@@ -40,14 +40,13 @@ function getBandcampInfo() {
 	return album;
 }
 
-album = getAlbumInfo();
+album = getPostInfo();
 
 var tumblrPostURI = 'https://www.tumblr.com/widgets/share/tool?url=' + encodeURIComponent(window.location.href) +
 	'&title=' + encodeURIComponent(album.title + ' by ' + album.artist) + 
 	'&caption=' + encodeURIComponent(' ') +
 	'&tags=' + encodeURIComponent(album.title + ',' + album.artist + ',' + album.tagString);
 
-// console.log(tumblrPostURI)
 window.open(tumblrPostURI,'1448156228497','width=700,height=500,toolbar=0,menubar=0,location=0,status=0,scrollbars=0,resizable=1,left=0,top=0');
 
 
