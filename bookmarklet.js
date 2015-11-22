@@ -29,7 +29,7 @@ function getBandcampInfo() {
 	album.price = $('li.buyItem h4 .base-text-color').first().text().replace(' ', '') + 
 		' ' + $('li.buyItem h4 .buyItemExtra.secondaryText').first().text().replace(' ', '');
 	album.payWhatYouWant = false;
-	album.tags = [];
+	album.tags = ['bandcamp'];
 	if (album.price.replace(/[\t\n ]/g, '').indexOf('nameyourprice') > -1) {
 		album.price = 0;
 		album.payWhatYouWant = true;
